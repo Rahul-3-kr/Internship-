@@ -1,4 +1,4 @@
-12] Find the maximum subarray sum in Rust
+// 12] Find the maximum subarray sum in Rust
 
 
 fn max_subarray_sum(arr: &[i32]) -> i32 {
