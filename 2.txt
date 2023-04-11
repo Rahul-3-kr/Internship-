@@ -1,4 +1,4 @@
-q2] Given a sorted array of integers, implement a function that returns the index of the first occurrence of a given number.
+// q2] Given a sorted array of integers, implement a function that returns the index of the first occurrence of a given number.
 
 
 
