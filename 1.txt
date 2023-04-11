@@ -1,0 +1,16 @@
+// function to check palindrome
+
+fn is_palindrome(input_str: &str) -> bool {
+    let reversed_str: String = input_str.chars().rev().collect();
+    input_str == reversed_str
+}
+
+
+//main function 
+
+fn main() {
+    let input_str1 = "racecar";
+    let input_str2 = "hello";
+    println!("{} is a palindrome: {}", input_str1, is_palindrome(input_str1));
+    println!("{} is a palindrome: {}", input_str2, is_palindrome(input_str2));
+}
