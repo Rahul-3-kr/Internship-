@@ -1,4 +1,4 @@
-q10] Check if a number is prime in Rust
+// q10] Check if a number is prime in Rust
 
 fn is_prime(n: i32) -> bool {
     if n <= 1 {
