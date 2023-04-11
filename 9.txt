@@ -1,4 +1,4 @@
-q9]Reverse a string in Rust
+// q9]Reverse a string in Rust
 
 fn reverse_string(s: &str) -> String {
     s.chars().rev().collect()
