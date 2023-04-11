@@ -1,4 +1,4 @@
-q11] Merge two sorted arrays in Rust
+// q11] Merge two sorted arrays in Rust
 
 
 fn merge_sorted_arrays(a: &[i32], b: &[i32]) -> Vec<i32> {
