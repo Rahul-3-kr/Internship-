@@ -1,4 +1,4 @@
-q7] Implement a function that returns the kth smallest element in a given array.
+// q7] Implement a function that returns the kth smallest element in a given array.
 
 //function for smallest element
 
