@@ -1,4 +1,4 @@
-q6] Implement a function that finds the longest common prefix of a given set of strings.
+// q6] Implement a function that finds the longest common prefix of a given set of strings.
 
 
 // function for prefix
