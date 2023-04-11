@@ -1,0 +1,40 @@
+q2] Given a sorted array of integers, implement a function that returns the index of the first occurrence of a given number.
+
+
+
+
+ fn first_occurrence(arr: &[i32], x: i32) -> Option<usize> {
+    let mut left = 0;
+    let mut right = arr.len() - 1;
+
+    while left <= right {
+        let mid = (left + right) / 2;
+
+        if arr[mid] == x && (mid == 0 || arr[mid - 1] < x) {
+            return Some(mid);
+        } else if arr[mid] < x {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    None
+}
+
+
+
+
+// main function 
+
+
+fn main() {
+    let arr = [1, 2, 3, 3, 3, 4, 5, 6];
+    let x = 3;
+
+    if let Some(idx) = first_occurrence(&arr, x) {
+        println!("First occurrence of {} is at index {}", x, idx);
+    } else {
+        println!("{} not found in the array", x);
+    }
+}

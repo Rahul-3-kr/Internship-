@@ -1,0 +1,26 @@
+q7] Implement a function that returns the kth smallest element in a given array.
+
+//function for smallest element
+
+fn find_kth_smallest_element(arr: &[i32], k: usize) -> Option<i32> {
+    if k > arr.len() {
+        return None;
+    }
+    let mut sorted_arr = arr.to_vec();
+    sorted_arr.sort();
+    Some(sorted_arr[k - 1])
+}
+
+
+
+// main function
+
+fn main() {
+    let arr = [7, 10, 4, 3, 20, 15];
+    let k = 3;
+    let kth_smallest_element = find_kth_smallest_element(&arr, k);
+    match kth_smallest_element {
+        Some(val) => println!("{}th smallest element in {:?} is {}", k, arr, val),
+        None => println!("Array length is smaller than k"),
+    }
+}

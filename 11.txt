@@ -1,0 +1,50 @@
+q11] Merge two sorted arrays in Rust
+
+
+fn merge_sorted_arrays(a: &[i32], b: &[i32]) -> Vec<i32> {
+    let mut result = Vec::with_capacity(a.len() + b.len());
+
+    let mut iter_a = a.iter();
+    let mut iter_b = b.iter();
+
+    let mut opt_a = iter_a.next();
+    let mut opt_b = iter_b.next();
+
+    while opt_a.is_some() && opt_b.is_some() {
+        let a_val = opt_a.unwrap();
+        let b_val = opt_b.unwrap();
+
+        if a_val < b_val {
+            result.push(*a_val);
+            opt_a = iter_a.next();
+        } else {
+            result.push(*b_val);
+            opt_b = iter_b.next();
+        }
+    }
+
+    while let Some(a_val) = opt_a {
+        result.push(*a_val);
+        opt_a = iter_a.next();
+    }
+
+    while let Some(b_val) = opt_b {
+        result.push(*b_val);
+        opt_b = iter_b.next();
+    }
+
+    result
+}
+
+
+
+// main function
+
+
+fn main() {
+    let a = [1, 3, 5];
+    let b = [2, 4, 6];
+
+    let merged = merge_sorted_arrays(&a, &b);
+    println!("{:?}", merged);
+}

@@ -1,0 +1,29 @@
+q6] Implement a function that finds the longest common prefix of a given set of strings.
+
+
+// function for prefix
+
+fn find_longest_common_prefix(strs: &[&str]) -> String {
+    if strs.is_empty() {
+        return String::new();
+    }
+    let mut prefix = String::new();
+    for (i, c) in strs[0].chars().enumerate() {
+        for s in strs.iter().skip(1) {
+            if i >= s.len() || s.chars().nth(i).unwrap() != c {
+                return prefix;
+            }
+        }
+        prefix.push(c);
+    }
+    prefix
+}
+
+
+// main function
+
+fn main() {
+    let strs = ["flower", "flow", "flight"];
+    let longest_prefix = find_longest_common_prefix(&strs);
+    println!("Longest common prefix of {:?} is {}", strs, longest_prefix);
+}

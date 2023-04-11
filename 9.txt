@@ -1,0 +1,14 @@
+q9]Reverse a string in Rust
+
+fn reverse_string(s: &str) -> String {
+    s.chars().rev().collect()
+}
+
+
+// main function
+
+fn main() {
+    let s = "hello world";
+    let reversed_str = reverse_string(s);
+    println!("Reversed string of {} is {}", s, reversed_str);
+}

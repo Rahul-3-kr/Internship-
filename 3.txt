@@ -1,0 +1,21 @@
+q3] Given a string of words, implement a function that returns the shortest word in the string.
+
+
+
+
+
+fn shortest_word(s: &str) -> Option<&str> {
+    s.split_whitespace().min_by_key(|w| w.len())
+}
+
+
+
+
+// main function
+
+
+fn main() {
+    let s = "The quick brown fox jumps over the lazy dog";
+    let shortest = shortest_word(s).unwrap();
+    println!("Shortest word: {}", shortest);
+}
